@@ -11,22 +11,22 @@ namespace Lab_02_5program
                 Console.Clear();
                 Console.Write("Write natural number N: ");
                 uint N = UInt32.Parse(Console.ReadLine());
+                int x, y, z = 0;
                 bool have_combination = false;
-                int x, y, z = 1;
                 if (N != 0)
                 {
-                    for (int i = 1; i <= N; i++)
+                    for (int i = 0; i <= N/3; i++)
                     {
-                        for (int j = 1; j <= N; j++)
+                        for (int j = 0; j <= N/3; j++)
                         {
-                            for (int k = 1; k <= N; k++)
+                            for (int k = 0; k <= N/3; k++)
                             {
                                 if ((Math.Pow(i, 3) + Math.Pow(j, 3) + Math.Pow(k, 3)) == N)
                                 {
                                     x = i;
                                     y = j;
                                     z = k;
-                                    Console.WriteLine($"The combination is\nx = {x}\ty = {j}\tz = {k}");
+                                    Console.WriteLine($"The combination is\nx = {x}\ty = {y}\tz = {z}");
                                     have_combination = true;
                                 }
                             }
